@@ -6,8 +6,8 @@
 #SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --account=def-liang-ab
 #SBATCH --nodes=1
-#SBATCH --cpus-per-task=65
-#SBATCH --mem=40G
+#SBATCH --cpus-per-task=3
+#SBATCH --mem=10G
 #SBATCH --time=00:10:00
 #SBATCH --constraint=turin
 #SBATCH --distribution=block:block
@@ -19,5 +19,5 @@ module load julia
 
 
 # Run Julia
-numactl --cpunodebind=0,1,2 --membind=0,1,2 \
+numactl --cpunodebind=0 --membind=0 \
 julia --project=$HOME/scratch/distributed_smc distributed_resample_experiment.jl
