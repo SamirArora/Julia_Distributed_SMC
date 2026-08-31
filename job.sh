@@ -19,5 +19,5 @@ module load julia
 
 
 # Run Julia
-numactl --cpunodebind=0, 1 --membind=0, 1 \
+numactl --cpunodebind=0,1 --membind=0,1 \
 julia --project=$HOME/scratch/distributed_smc distributed_resample_experiment.jl
