@@ -2,7 +2,7 @@ using Distributed
 
 
 # number of worker processes
-const NUM_PROCS = 4
+const NUM_PROCS = 8
 nw = nprocs() - 1
 if nw < NUM_PROCS
     addprocs(NUM_PROCS - nw)
