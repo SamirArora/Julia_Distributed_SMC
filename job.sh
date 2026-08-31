@@ -7,7 +7,7 @@
 #SBATCH --account=def-liang-ab
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=3
-#SBATCH --mem=10G
+#SBATCH --mem=5G
 #SBATCH --time=00:10:00
 #SBATCH --constraint=turin
 #SBATCH --distribution=block:block
