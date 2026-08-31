@@ -6,7 +6,7 @@
 #SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --account=def-liang-ab
 #SBATCH --nodes=1
-#SBATCH --cpus-per-task=97
+#SBATCH --cpus-per-task=101
 #SBATCH --mem=50G
 #SBATCH --time=00:10:00
 #SBATCH --constraint=turin
