@@ -2,7 +2,7 @@ using Distributed
 
 
 # number of worker processes
-const NUM_PROCS = 8
+const NUM_PROCS = 4
 nw = nprocs() - 1
 if nw < NUM_PROCS
     addprocs(NUM_PROCS - nw)
@@ -16,9 +16,9 @@ end
 @everywhere include("distributed_resample.jl")
 
 # other global variables
-@everywhere const N = 800000
+@everywhere const N = 8000
 const block_size = N ÷ NUM_PROCS
-@everywhere const dim = 1000
+@everywhere const dim = 100
 const seed = 1
 n_high = floor(Int, N * 0.02)
 n_medium = floor(Int, N * 0.1)
